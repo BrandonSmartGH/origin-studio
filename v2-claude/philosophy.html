@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffffff"><meta property="og:type" content="website"><meta property="og:site_name" content="Origin Studio">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ccircle cx='30' cy='34' r='15' fill='none' stroke='white' stroke-width='6'/%3E%3Ccircle cx='46' cy='18' r='6' fill='%230071e3'/%3E%3C/svg%3E">
+<title>Our Philosophy · Origin Studio</title>
+<meta name="description" content="Social media doesn't find your customers. It convinces them. How Origin Studio thinks about social video for trust-based businesses.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#ffffff; --gray:#f5f5f7; --gray-2:#e8e8ed; --ink:#1d1d1f; --ink-2:#424245; --muted:#6e6e73; --muted-2:#86868b; --line:#d2d2d7;
+  --blue:#0071e3; --blue-hover:#0077ed; --link:#0066cc; --blue-soft:#e8f1fc; --good:#1f8a3b;
+  --font:-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --max:1024px; --wide:1200px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:64px;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.47;letter-spacing:-.022em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+button,input,select{font:inherit;letter-spacing:inherit;color:inherit}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+p{margin:0}
+h1,h2,h3,h4{margin:0;font-weight:600;text-wrap:balance}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:22px}
+.wide{max-width:var(--wide);margin:0 auto;padding-inline:22px}
+.center{text-align:center}
+.gray{background:var(--gray)}
+.dim{color:var(--muted-2)}
+.eyebrow{display:block;font-size:17px;font-weight:600;color:var(--muted);letter-spacing:-.01em;margin-bottom:10px}
+.h1{font-size:clamp(48px,7.4vw,80px);line-height:1.05;letter-spacing:-.015em}
+.h2{font-size:clamp(36px,5.2vw,56px);line-height:1.07;letter-spacing:-.005em}
+.h3{font-size:clamp(24px,2.6vw,28px);line-height:1.14;letter-spacing:.004em}
+.lede{font-size:clamp(19px,2.1vw,24px);line-height:1.33;letter-spacing:.009em;color:var(--ink);max-width:40ch}
+.center .lede{margin-inline:auto}
+.small{font-size:14px;line-height:1.43;letter-spacing:-.016em;color:var(--muted)}
+.sec{padding-block:clamp(80px,11vw,140px)}
+.sec-head{margin-bottom:clamp(40px,6vw,64px)}
+.sec-head .lede{margin-top:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--blue);color:#fff;border:0;border-radius:980px;padding:12px 22px;font-size:17px;font-weight:400;cursor:pointer;text-decoration:none;transition:background .2s}
+.btn:hover{background:var(--blue-hover);text-decoration:none}
+.btn.lg{font-size:19px;padding:16px 32px}
+.btn.sm{font-size:14px;padding:7px 15px}
+.btn.outline{background:transparent;color:var(--blue);box-shadow:inset 0 0 0 1px var(--blue)}
+.btn.outline:hover{background:var(--blue);color:#fff}
+.more{color:var(--link);font-size:17px;white-space:nowrap}
+.more::after{content:" ›";font-size:1.1em}
+
+/* Nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.08)}
+.nav-in{max-width:var(--wide);margin:0 auto;padding-inline:22px;height:52px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:8px;color:var(--ink);font-size:17px;font-weight:600;letter-spacing:-.02em}
+.brand:hover{text-decoration:none}
+.mark{width:18px;height:18px;border:3.5px solid var(--ink);border-radius:50%;position:relative;flex-shrink:0}
+.mark::after{content:"";position:absolute;width:6px;height:6px;border-radius:50%;background:var(--blue);right:-5px;top:-5px}
+.links{display:flex;gap:28px;font-size:13px;letter-spacing:-.01em}
+.links a{color:var(--ink-2)}
+.links a:hover{color:var(--ink);text-decoration:none}
+
+/* Plus button + flip card */
+.plus{position:absolute;right:18px;bottom:18px;width:36px;height:36px;border-radius:50%;border:0;background:#333336;color:#fff;cursor:pointer;display:grid;place-items:center;transition:background .2s,transform .35s;z-index:3}
+.plus:hover{background:#1d1d1f}
+.plus svg{width:14px;height:14px;transition:transform .35s}
+.flip[data-open="true"] .plus svg{transform:rotate(45deg)}
+.flip{position:relative;perspective:1600px}
+.flip-in{display:grid;transition:transform .7s cubic-bezier(.3,.7,.2,1);transform-style:preserve-3d}
+.flip[data-open="true"] .flip-in{transform:rotateY(180deg)}
+.face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:28px;overflow:hidden;position:relative}
+.back{transform:rotateY(180deg);background:#1d1d1f;color:#f5f5f7;padding:36px 34px 76px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.back h4{font-size:21px;line-height:1.2}
+.back p{color:#d2d2d7;font-size:17px}
+.back .plus{background:#f5f5f7;color:#1d1d1f}
+
+/* Footer */
+.foot{background:var(--gray);font-size:12px;color:var(--muted);padding-block:28px 110px;letter-spacing:-.01em}
+.foot-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;border-top:1px solid var(--line);padding-top:18px}
+.foot nav{display:flex;flex-wrap:wrap;gap:6px 20px}
+.foot a{color:var(--ink-2)}
+
+/* Reveal */
+.rv{transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv.pre{opacity:0;transform:translateY(30px)}
+@media (max-width:760px){.links{display:none}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .rv.pre{opacity:1;transform:none}
+  .flip[data-open="true"] .flip-in{transform:none}
+  .flip[data-open="true"] .front{visibility:hidden}
+  .back{transform:none}
+  .flip:not([data-open="true"]) .back{visibility:hidden}
+}
+
+.art-hero{padding-block:clamp(64px,9vw,120px) clamp(40px,5vw,64px);text-align:center}
+.art-hero .h1{max-width:15ch;margin:0 auto}
+.art-hero .lede{margin:24px auto 0;max-width:36ch;color:var(--muted)}
+.prose{max-width:692px;margin:0 auto;padding-inline:22px}
+.prose p{font-size:19px;line-height:1.58;letter-spacing:.012em;color:var(--ink-2);margin-top:22px}
+.prose p strong{color:var(--ink);font-weight:600}
+.prose h2{font-size:clamp(28px,3.4vw,36px);line-height:1.15;letter-spacing:.004em;margin-top:clamp(64px,9vw,96px)}
+.figure{max-width:980px;margin:clamp(48px,6vw,72px) auto;padding-inline:22px}
+.panel{background:var(--gray);border-radius:28px;padding:clamp(24px,4vw,48px)}
+.caption{text-align:center;font-size:14px;color:var(--muted);margin-top:16px}
+.gap svg{width:100%;height:auto;display:block}
+.gap .ln{stroke:#86868b;stroke-width:3;stroke-linecap:round}
+.gap .zone{fill:var(--blue-soft)}
+.gap .dot{fill:#1d1d1f}
+.gap .bd{fill:var(--blue)}
+.gap text{font-family:var(--font);letter-spacing:-.01em}
+.gap .t1{font-size:22px;font-weight:600;fill:var(--ink)}
+.gap .t2{font-size:17px;fill:var(--muted)}
+.gap .tb{font-size:22px;font-weight:600;fill:var(--blue)}
+.gap .walker{fill:var(--blue);animation:walk 7s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes walk{0%{transform:translateX(0)}20%{transform:translateX(0)}45%,70%{transform:translateX(340px)}95%,100%{transform:translateX(680px)}}
+.qs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.q{background:#fff;border-radius:22px;padding:28px 24px}
+.q .k{font-size:14px;font-weight:600;color:var(--blue)}
+.q h3{font-size:22px;line-height:1.2;margin:8px 0 10px}
+.q p{font-size:15px;color:var(--muted)}
+.pull{max-width:880px;margin:clamp(56px,8vw,96px) auto;padding-inline:22px;text-align:center;font-size:clamp(30px,4.2vw,48px);line-height:1.12;font-weight:600;letter-spacing:-.005em}
+.pull span{color:var(--blue)}
+.meet{display:grid;gap:26px}
+.meet-row{display:grid;grid-template-columns:190px 1fr 60px;align-items:center;gap:18px}
+.meet-row b{font-size:19px}
+.meet-row small{display:block;color:var(--muted);font-size:14px;font-weight:400}
+.meet-dots{display:flex;flex-wrap:wrap;gap:8px}
+.meet-dots i{width:22px;height:22px;border-radius:50%;background:var(--blue);animation:md .5s cubic-bezier(.3,1.5,.5,1) backwards}
+.meet-row .n{font-size:32px;font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+@keyframes md{from{transform:scale(0)}}
+.not{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.not>div{background:#fff;border-radius:22px;padding:28px}
+.not h3{font-size:19px;margin-bottom:14px}
+.not ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:17px}
+.not li{display:flex;gap:10px;align-items:flex-start}
+.not li::before{content:"";flex-shrink:0;width:18px;height:18px;border-radius:50%;margin-top:3px;background:var(--blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.3l2.6 2.5L13 6.5' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E")}
+.not .x li::before{background:#86868b url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M6 6l6 6M12 6l-6 6' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E")}
+.end{text-align:center;padding-block:clamp(80px,10vw,120px)}
+.end .btns{display:flex;justify-content:center;flex-wrap:wrap;gap:16px 26px;align-items:center;margin-top:28px}
+@media (max-width:760px){.qs,.not{grid-template-columns:1fr}.meet-row{grid-template-columns:1fr 50px}.meet-row .meet-dots{grid-column:1/-1;grid-row:2}.gap .t2{display:none}}
+</style>
+</head><body>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="./"><span class="mark" aria-hidden="true"></span>Origin Studio</a>
+    <nav class="links" aria-label="Main"><a href="./#trust">Why it works</a><a href="./#work">Our work</a><a href="./#pricing">Pricing</a><a href="philosophy.html" aria-current="page" style="color:var(--ink)">Our philosophy</a></nav>
+    <a class="btn sm" href="./#book">Get started</a>
+  </div>
+</header>
+<main>
+<section class="art-hero wrap">
+  <span class="eyebrow">Our philosophy</span>
+  <h1 class="h1">Social media doesn't find your customers.</h1>
+  <p class="lede">It convinces them. Here's how we think about social video for businesses built on trust.</p>
+</section>
+
+<article>
+<div class="prose">
+  <h2 style="margin-top:0">The part of the sale you never see.</h2>
+  <p>Every lead who reaches out to you did something first. They looked you up. A friend mentioned your name, or they found you on Google, or they saw your truck. Then, before they called, they opened your Instagram or your Facebook page.</p>
+  <p>You'll never see that moment. But it decides whether they call you or keep looking. <strong>We call it the trust gap.</strong></p>
+</div>
+
+<figure class="figure">
+  <div class="panel gap">
+    <svg viewBox="0 0 900 250" role="img" aria-label="A lead hears about you, looks you up, then reaches out. The middle step is the trust gap.">
+      <rect class="zone" x="300" y="58" width="300" height="104" rx="18"/>
+      <line class="ln" x1="110" y1="110" x2="790" y2="110"/>
+      <circle class="dot" cx="110" cy="110" r="10"/>
+      <circle class="bd" cx="450" cy="110" r="12"/>
+      <circle class="dot" cx="790" cy="110" r="10"/>
+      <circle class="walker" cx="110" cy="110" r="7"/>
+      <text class="tb" x="450" y="42" text-anchor="middle">The trust gap</text>
+      <text class="t1" x="110" y="200" text-anchor="middle">They hear about you</text>
+      <text class="t2" x="110" y="228" text-anchor="middle">Referral, Google, ad, sign</text>
+      <text class="t1" x="450" y="200" text-anchor="middle">They look you up</text>
+      <text class="t2" x="450" y="228" text-anchor="middle">Where trust is won or lost</text>
+      <text class="t1" x="790" y="200" text-anchor="middle">They reach out</text>
+      <text class="t2" x="790" y="228" text-anchor="middle">Already comfortable with you</text>
+    </svg>
+  </div>
+  <figcaption class="caption">Social media's real job happens in the middle.</figcaption>
+</figure>
+
+<div class="prose">
+  <p>An empty page, or a last post from two years ago, creates doubt at exactly the wrong time. A steady feed of you answering questions, showing your work and introducing your people does the opposite. It closes the gap before you ever say hello.</p>
+
+  <h2>What they're really asking.</h2>
+  <p>Nobody scrolls your page thinking about content strategy. They're quietly asking three questions. Every video we make answers one of them.</p>
+</div>
+
+<figure class="figure">
+  <div class="panel"><div class="qs">
+    <div class="q"><span class="k">Answers</span><h3>Do they know their stuff?</h3><p>Short, clear answers to the questions leads already have.</p></div>
+    <div class="q"><span class="k">The work</span><h3>Are they any good?</h3><p>Projects, process and results they can see for themselves.</p></div>
+    <div class="q"><span class="k">People</span><h3>Will I like working with them?</h3><p>The faces they'll meet, so the first meeting feels familiar.</p></div>
+  </div></div>
+</figure>
+
+<div class="prose">
+  <h2>Views are the wrong scoreboard.</h2>
+  <p>Chasing viral reach brings in strangers from other states. For a dentist in Sandy or a builder in Bend, a thousand views from the wrong people are worth less than ten from the right ones.</p>
+  <p>The audience that matters is small and specific: the people who heard your name this month and are deciding whether to call. We make videos for them.</p>
+</div>
+
+<p class="pull">The goal isn't to be seen by everyone.<br><span>It's to be trusted by the people already looking.</span></p>
+
+<div class="prose">
+  <h2>Familiarity adds up.</h2>
+  <p>Every video is a small meeting. The more of them a lead has had, the more your first real conversation feels like your second. That's why how often you post matters.</p>
+</div>
+
+<figure class="figure">
+  <div class="panel meet" id="meet">
+    <div class="meet-row"><b>Once a week<small>You look active and trustworthy.</small></b><div class="meet-dots" data-n="4"></div><span class="n">4</span></div>
+    <div class="meet-row"><b>Twice a week<small>You start to feel familiar.</small></b><div class="meet-dots" data-n="8"></div><span class="n">8</span></div>
+    <div class="meet-row"><b>Three times a week<small>You become the obvious choice.</small></b><div class="meet-dots" data-n="12"></div><span class="n">12</span></div>
+  </div>
+  <figcaption class="caption">Times a lead has "met" you after following along for one month.</figcaption>
+</figure>
+
+<div class="prose">
+  <h2>What we don't do.</h2>
+  <p>We don't run ads, chase trends or promise followers. If you want social media to bring in new leads on its own, an ad agency is a better fit, and we'll happily say so.</p>
+  <p>What we do is make every lead you already get more likely to say yes. That includes the leads your ads bring in.</p>
+</div>
+
+<figure class="figure">
+  <div class="panel"><div class="not">
+    <div><h3>We're a fit if</h3><ul><li>People need to trust you before they hire you.</li><li>You already get leads from referrals, search or ads.</li><li>You want more of those leads to say yes.</li></ul></div>
+    <div class="x"><h3>We're not a fit if</h3><ul><li>You want social media to generate leads by itself.</li><li>You're measuring success in views and followers.</li></ul></div>
+  </div></div>
+</figure>
+
+<div class="prose">
+  <h2>Why we do it for you.</h2>
+  <p>Consistency is the whole game, and it's the first thing to slip when you're busy running a business. So we take it off your plate. One planning call, one filming session, and months of videos, with your approval at every step.</p>
+</div>
+</article>
+
+<section class="end wrap">
+  <h2 class="h2">Close the trust gap.</h2>
+  <div class="btns"><a class="btn lg" href="./#book">Get my time back</a><a class="more" href="./#pricing">See pricing</a></div>
+</section>
+</main>
+<footer class="foot">
+  <div class="wide"><div class="foot-in"><span>Copyright © <span id="yr">2026</span> Origin Studio. Salt Lake City, Utah.</span><nav><a href="./">Home</a><a href="./#pricing">Pricing</a><a href="privacy.html">Privacy</a><a href="terms.html">Service details</a></nav></div></div>
+</footer>
+<script>
+'use strict';
+document.getElementById('yr').textContent=new Date().getFullYear();
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('.meet-dots').forEach(d=>{for(let i=0;i<+d.dataset.n;i++){const e=document.createElement('i');e.style.animationDelay=(i*60)+'ms';d.append(e);}});
+if(!reduce&&'IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target);}}),{rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.figure,.prose h2,.pull').forEach(n=>{n.classList.add('rv');if(n.getBoundingClientRect().top>innerHeight){n.classList.add('pre');io.observe(n);}});
+  const m=document.getElementById('meet');
+  new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){m.querySelectorAll('i').forEach(i=>{i.style.animation='none';void i.offsetWidth;i.style.animation='';});o.disconnect();}},{threshold:.4}).observe(m);
+}
+</script>
+</body></html>
