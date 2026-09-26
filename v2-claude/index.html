@@ -2,10 +2,6 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#ffffff"><meta property="og:type" content="website"><meta property="og:site_name" content="Origin Studio">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ccircle cx='30' cy='34' r='15' fill='none' stroke='white' stroke-width='6'/%3E%3Ccircle cx='46' cy='18' r='6' fill='%230071e3'/%3E%3C/svg%3E">
-<title>Origin Studio</title>
-<meta name="description" content="Done-for-you social video for trust-based businesses. Your leads look you up before they reach out. We plan, film, edit and post the videos that win them over.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <script>
   window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
 </script>
@@ -14,6 +10,10 @@
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
+<title>Origin Studio</title>
+<meta name="description" content="Done-for-you social video for trust-based businesses. Your leads look you up before they reach out. We plan, film, edit and post the videos that win them over.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <style>
 :root{
   color-scheme:light;
@@ -127,6 +127,35 @@ h1,h2,h3,h4{margin:0;font-weight:600;text-wrap:balance}
 .hero-cta{display:flex;flex-direction:column;align-items:center;gap:16px}
 .hero-cta p{max-width:44ch;color:var(--muted);font-size:17px}
 .hero-cta p b{color:var(--ink);font-weight:600}
+
+/* ---------- Hero video ---------- */
+.hero-media{position:relative;max-width:1240px;margin:clamp(40px,5vw,56px) auto clamp(36px,4.5vw,52px);padding-inline:22px}
+.hero-media video{display:block;width:100%;aspect-ratio:16/9;border-radius:28px;background:#fff;object-fit:cover}
+.vctrl{position:absolute;right:38px;bottom:16px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 2px 10px rgba(0,0,0,.12);display:grid;place-items:center;cursor:pointer;color:var(--ink)}
+.vctrl:hover{background:#fff}
+@media (max-width:640px){.hero-media{padding-inline:12px}.hero-media video{aspect-ratio:4/5;border-radius:22px}.vctrl{right:24px;bottom:12px}}
+
+/* ---------- Client work ---------- */
+.cwork{padding-block:clamp(72px,9vw,120px) clamp(40px,5vw,64px)}
+.crail{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 22px 70px;margin-bottom:-44px!important;scrollbar-width:none;max-width:var(--wide);margin:0 auto}
+.crail::-webkit-scrollbar{display:none}
+.cphone{flex:0 0 clamp(210px,23vw,280px);scroll-snap-align:center;aspect-ratio:540/1178;border-radius:clamp(34px,4vw,46px);background:#1d1d1f;padding:clamp(6px,.7vw,9px);position:relative;box-shadow:0 30px 60px -32px rgba(0,0,0,.45)}
+.cphone video{display:block;width:100%;height:100%;object-fit:cover;border-radius:calc(clamp(34px,4vw,46px) - 8px);background:#111}
+.snd{position:absolute;left:50%;bottom:clamp(18px,2vw,26px);transform:translateX(-50%);display:flex;align-items:center;gap:7px;border:0;border-radius:99px;padding:8px 14px;background:rgba(255,255,255,.22);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:#fff;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+.snd:hover{background:rgba(255,255,255,.34)}
+.snd svg{width:15px;height:15px}
+.cphone.on .snd{background:#fff;color:var(--ink)}
+
+/* ---------- Logos ---------- */
+.logos-band{padding-block:clamp(28px,4vw,48px) clamp(48px,6vw,72px)}
+.logos-band p{text-align:center;color:var(--muted);font-size:17px;margin-bottom:34px}
+.mq{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq-track{display:flex;align-items:center;gap:clamp(44px,5vw,72px);width:max-content;animation:mq 70s linear infinite}
+.mq:hover .mq-track{animation-play-state:paused}
+.mq-track img{display:block;width:auto;opacity:.62;transition:opacity .3s}
+.mq-track img:hover{opacity:1}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.mq{-webkit-mask-image:none;mask-image:none}.mq-track{animation:none;flex-wrap:wrap;justify-content:center;width:auto;max-width:var(--wide);margin:0 auto;padding-inline:22px;row-gap:28px}.mq-track [aria-hidden]{display:none}}
 
 /* ---------- Proof strip ---------- */
 .proof-strip{border-block:1px solid var(--line)}
@@ -257,11 +286,24 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}
 .cal .dw{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;font-size:10px;color:var(--muted-2);text-align:center;margin-bottom:4px}
 .step .back{min-height:520px}
 
+/* ---------- Testimonials ---------- */
+.feature{max-width:900px;margin:0 auto clamp(40px,5vw,56px);text-align:center}
+.feature blockquote{margin:0;font-size:clamp(24px,3vw,34px);line-height:1.25;font-weight:600;letter-spacing:-.005em}
+.feature blockquote::before{content:"\201C";display:block;font-size:1.9em;line-height:.8;color:var(--blue);height:.55em}
+.feature cite{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:24px;font-style:normal;font-size:15px;color:var(--muted)}
+.feature cite b{color:var(--ink);font-weight:600}
+.stars{color:#ff9f0a;letter-spacing:2px;font-size:15px}
+.review .who{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto}
+.review .who img{height:26px;width:auto;opacity:.55;flex-shrink:0;max-width:96px;object-fit:contain}
+.review cite b{display:block;color:var(--ink);font-weight:600;font-size:15px}
+.more-reviews{text-align:center;margin-top:30px}
+.g-link{display:block;text-align:center;margin-top:18px}
+.refer-band{padding-block:0 clamp(80px,10vw,120px)}
 /* ---------- Reviews ---------- */
 .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .review{background:#fff;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:18px}
 .review .stars{color:#f5a623;letter-spacing:2px;font-size:15px}
-.review blockquote{margin:0;font-size:21px;line-height:1.38;font-weight:500;letter-spacing:.005em}
+.review blockquote{margin:0;font-size:19px;line-height:1.42;font-weight:500;letter-spacing:.005em}
 .review cite{font-style:normal;font-size:14px;color:var(--muted);margin-top:auto}
 .review.ph{background:transparent;border:1.5px dashed var(--line)}
 .review.ph blockquote{color:var(--muted-2)}
@@ -431,19 +473,14 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}
     <h1 class="h1">Trusted before<br>the first hello.</h1>
     <p class="lede">Your leads check you out before they reach out. We plan, film, edit and post the videos that win them over.</p>
   </div>
-  <div class="phones" aria-label="Sample videos">
-    <div class="phone side" data-caps='["Hi, I&apos;m the agent who actually calls you back.","Here&apos;s how I get you ready to list."]'>
-      <div class="screen"><img src="assets/sample-0.jpg" alt="A real estate agent on a call at her desk" width="540" height="810"><div class="shade"></div>
-        <div class="tag"><span>Meet the team</span><span>Sample</span></div><div class="cap"></div><div class="handle"><i></i>yourbusiness</div><div class="bar"></div></div>
-    </div>
-    <div class="phone" data-caps='["Why we measure three times before we cut once.","It saves you a remodel later."]'>
-      <div class="screen"><img src="assets/sample-1.jpg" alt="A woodworker measuring a board in his shop" width="540" height="810"><div class="shade"></div>
-        <div class="tag"><span>The work</span><span>Sample</span></div><div class="cap"></div><div class="handle"><i></i>yourbusiness</div><div class="bar" style="animation-delay:-2.3s"></div></div>
-    </div>
-    <div class="phone side" data-caps='["Does a cleaning actually hurt?","Here&apos;s what to expect in the chair."]'>
-      <div class="screen"><img src="assets/sample-2.jpg" alt="A dentist and assistant with a patient" width="540" height="808"><div class="shade"></div>
-        <div class="tag"><span>Your questions</span><span>Sample</span></div><div class="cap"></div><div class="handle"><i></i>yourbusiness</div><div class="bar" style="animation-delay:-4.6s"></div></div>
-    </div>
+  <div class="hero-media">
+    <video id="hero-video" muted loop playsinline preload="auto" poster="assets/hero/hero-land.jpg" aria-label="Two hours of filming becomes six months of posts. You approve it. We handle the rest.">
+      <source src="assets/hero/hero-port.webm" type="video/webm" media="(max-width: 640px)">
+      <source src="assets/hero/hero-port.mp4" type="video/mp4" media="(max-width: 640px)">
+      <source src="assets/hero/hero-land.webm" type="video/webm">
+      <source src="assets/hero/hero-land.mp4" type="video/mp4">
+    </video>
+    <button class="vctrl" type="button" id="hero-toggle" aria-label="Pause video"><svg width="12" height="14" viewBox="0 0 12 14"><path d="M1 1h3v12H1zM8 1h3v12H8z" fill="currentColor"/></svg></button>
   </div>
   <div class="wrap hero-cta">
     <a class="btn lg" href="#book" data-cta="hero">Get my time back</a>
@@ -451,11 +488,27 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}
   </div>
 </section>
 
+<!-- WORK -->
+<section class="cwork" id="work">
+  <div class="wide sec-head center rv" style="margin-bottom:40px">
+    <span class="eyebrow">Our work</span>
+    <h2 class="h2">Real clients.<br><span class="dim">Real answers.</span></h2>
+    <p class="lede">Every video answers a question leads won't ask out loud. Tap one to hear it.</p>
+  </div>
+  <div class="crail" id="crail"></div>
+  <div class="rail-ctrl"><button type="button" id="rail-prev" aria-label="Previous videos"><svg width="10" height="16" viewBox="0 0 10 16"><path d="M8 2L2 8l6 6" fill="none" stroke="#1d1d1f" stroke-width="2"/></svg></button><button type="button" id="rail-next" aria-label="Next videos"><svg width="10" height="16" viewBox="0 0 10 16"><path d="M2 2l6 6-6 6" fill="none" stroke="#1d1d1f" stroke-width="2"/></svg></button></div>
+</section>
+
+<section class="logos-band" aria-label="Clients">
+  <p>Trusted by businesses from Seattle to Charlotte.</p>
+  <div class="mq"><div class="mq-track" id="mq"></div></div>
+</section>
+
 <section class="proof-strip" aria-label="At a glance">
   <div class="wrap proof-in">
     <div><b>Nearly 4 years</b><span>filming for trust-based businesses</span></div>
     <div><b>8 cities</b><span>from Seattle to Charlotte</span></div>
-    <div><b>5-star</b><span>client reviews</span></div>
+    <div><b><a href="#reviews" style="color:inherit">5-star</a></b><span>client reviews</span></div>
     <div><b>Years-long</b><span>client relationships</span></div>
   </div>
 </section>
@@ -485,9 +538,9 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}
         <span class="n">STEP 2</span>
         <div class="viz">
           <div class="mini"><div class="mini-s">
-            <div class="pf"><span class="av"></span><span class="nm">Your Business<small>Trusted since day one</small></span></div>
+            <div class="pf"><span class="av"></span><span class="nm">Your Business<small>Real estate · Salt Lake City</small></span></div>
             <span class="fl">Follow</span>
-            <div class="grid"><span style="background-image:url(assets/sample-1.jpg)"></span><span style="background-image:url(assets/sample-0.jpg)"></span><span style="background-image:url(assets/sample-2.jpg)"></span><span style="background-image:url(assets/sample-2.jpg)"></span><span style="background-image:url(assets/sample-1.jpg)"></span><span style="background-image:url(assets/sample-0.jpg)"></span><span style="background-image:url(assets/sample-0.jpg)"></span><span style="background-image:url(assets/sample-2.jpg)"></span><span style="background-image:url(assets/sample-1.jpg)"></span></div>
+            <div class="grid"><span style="background-image:url(assets/thumbs/th1.jpg)"></span><span style="background-image:url(assets/thumbs/th2.jpg)"></span><span style="background-image:url(assets/thumbs/th3.jpg)"></span><span style="background-image:url(assets/thumbs/th4.jpg)"></span><span style="background-image:url(assets/thumbs/th5.jpg)"></span><span style="background-image:url(assets/thumbs/th6.jpg)"></span><span style="background-image:url(assets/thumbs/th7.jpg)"></span><span style="background-image:url(assets/thumbs/th8.jpg)"></span><span style="background-image:url(assets/thumbs/th9.jpg)"></span></div>
           </div></div>
         </div>
         <h3>They look you up.</h3>
@@ -518,16 +571,6 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}
     </div>
     <p class="trust-more"><a class="more" href="philosophy.html">Read our philosophy</a></p>
   </div>
-</section>
-
-<!-- WORK -->
-<section class="sec" id="work">
-  <div class="wide sec-head rv">
-    <span class="eyebrow">Our work</span>
-    <h2 class="h2">Every video answers<br><span class="dim">a question they won't ask.</span></h2>
-  </div>
-  <div class="rail" id="rail"></div>
-  <div class="rail-ctrl"><button type="button" id="rail-prev" aria-label="Previous"><svg width="10" height="16" viewBox="0 0 10 16"><path d="M8 2L2 8l6 6" fill="none" stroke="#1d1d1f" stroke-width="2"/></svg></button><button type="button" id="rail-next" aria-label="Next"><svg width="10" height="16" viewBox="0 0 10 16"><path d="M2 2l6 6-6 6" fill="none" stroke="#1d1d1f" stroke-width="2"/></svg></button></div>
 </section>
 
 <!-- TIME -->
@@ -591,7 +634,7 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}
         <div class="flip-in">
           <div class="face front">
             <span class="num">Film</span><h3>You see every shot.</h3><p class="sub">Approve it on the spot.</p>
-            <div class="ui"><div class="monitor"><img src="assets/sample-1.jpg" alt="" width="540" height="810"><div class="corners"></div><div class="rec"><i></i>REC</div><div class="ask">Love this take?<span>Yes</span></div></div></div>
+            <div class="ui"><div class="monitor"><img src="assets/thumbs/monitor.jpg" alt="" width="608" height="1080"><div class="corners"></div><div class="rec"><i></i>REC</div><div class="ask">Love this take?<span>Yes</span></div></div></div>
             <button class="plus" type="button" aria-expanded="false" aria-label="More about filming"><svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
           </div>
           <div class="face back" inert>
@@ -628,19 +671,10 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}
       <span class="eyebrow">Reviews</span>
       <h2 class="h2">Clients who stay.<br><span class="dim">And send their network.</span></h2>
     </div>
-    <div class="reviews rv" id="review-grid"></div>
-    <div class="logos" id="logos"></div>
-    <div class="refer rv" id="refer">
-      <div>
-        <h3>Know a business that belongs here?</h3>
-        <p>Most new clients come from a client's network. Make your personal link and share it. When they book, we'll know you sent them.</p>
-        <p class="ref-note" id="ref-reward" hidden></p>
-      </div>
-      <div>
-        <form id="ref-form"><label class="hp" for="ref-name">Your name</label><input id="ref-name" placeholder="Your name" autocomplete="name" required maxlength="60"><button class="btn" type="submit">Create my link</button></form>
-        <div class="ref-out" id="ref-out" hidden><code id="ref-link"></code><button class="btn sm" type="button" id="ref-copy">Copy</button></div>
-      </div>
-    </div>
+    <figure class="feature rv" id="feature"></figure>
+    <div class="reviews" id="review-grid"></div>
+    <div class="more-reviews"><button class="btn outline" type="button" id="more-rev">More reviews</button></div>
+    <a class="more g-link" id="g-link" hidden target="_blank" rel="noopener">Read all reviews on Google</a>
   </div>
 </section>
 
@@ -722,6 +756,23 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}
     <div class="map rv" aria-hidden="true"><svg id="map" viewBox="0 0 1000 550"></svg></div>
     <div class="chips" id="chips"></div>
     <p class="where-note">Based in Salt Lake City. Filming anywhere in the US.</p>
+  </div>
+</section>
+
+<!-- REFER -->
+<section class="refer-band">
+  <div class="wide">
+    <div class="refer rv" id="refer" style="margin-top:0;background:var(--gray)">
+      <div>
+        <h3>Know a business that belongs here?</h3>
+        <p>Most new clients come from a client's network. Make your personal link and share it. When they book, we'll know you sent them.</p>
+        <p class="ref-note" id="ref-reward" hidden></p>
+      </div>
+      <div>
+        <form id="ref-form"><label class="hp" for="ref-name">Your name</label><input id="ref-name" placeholder="Your name" autocomplete="name" required maxlength="60"><button class="btn" type="submit">Create my link</button></form>
+        <div class="ref-out" id="ref-out" hidden><code id="ref-link"></code><button class="btn sm" type="button" id="ref-copy">Copy</button></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -819,16 +870,25 @@ const CONFIG = {
   ga4Id: '', metaPixelId: '',
   phone: '', phoneDisplay: '', email: '',
   founderPhoto: '',       // e.g. assets/devin.jpg (replaces the slate)
-  showPlaceholders: true, // shows empty review/logo slots so you can see where they go
   referralReward: '',     // e.g. 'When they sign on, your next plan is $250 less.'
-  reviews: [ /* {quote:'Exact words from the review', name:'Jane Doe', business:'Doe Dental', url:'https://...'} */ ],
-  logos: [ /* {name:'Client', src:'assets/client.svg'} */ ],
-  // Client work. Replace samples with real films: {kind, question, title, poster, video, captions}
-  work: [
-    {kind:'Answers', question:'Do they know their stuff?', poster:'assets/sample-2.jpg', video:'', sample:true, about:'Short answers to the questions your leads are already asking. They show you know your field.'},
-    {kind:'The work', question:'Are they any good?', poster:'assets/sample-1.jpg', video:'', sample:true, about:'Projects, process and results. Leads see the care that goes into the job.'},
-    {kind:'People', question:'Will I like working with them?', poster:'assets/sample-0.jpg', video:'', sample:true, about:'Introductions to you and your team, so the first meeting feels like the second.'}
+  googleReviewsUrl: '',  // link to your Google reviews page
+  feature: {quote:'Devin met with me for a day and came prepared with hundreds of real estate and local questions designed to assist potential clients. We filmed many many short clips and once I approved them, Devin has been regularly posting to my accounts. … I couldn’t have done it without her.', name:'Keith Offord', role:'Founder, Ross Valley Real Estate · Marin County, CA'},
+  // Exact words from client reviews ("…" marks trimmed text). First 6 show; the rest appear under "More reviews".
+  reviews: [
+    {quote:'She’s taken our social media from non-existent to great. … She’s great to work with, puts you at ease behind the camera and communicates well.', name:'Natalie Jacobsen', role:'Broker & Owner, Bear Lake Getaway Realty', logo:'assets/logos/blgr.png'},
+    {quote:'I feel like she has saved me a ton of hours and set up an efficient marketing strategy.', name:'Bethany Forest', role:'Owner, HEAL Yoga Studio'},
+    {quote:'Devin has been a wonderful marketing partner. … I’ve used her for 3 years now and I deeply appreciate her adaptive and calm spirit.', name:'Holly Matthews', role:'Owner, Rosewood Tax Services', logo:'assets/logos/rosewood.png'},
+    {quote:'They have taken a part of my marketing off my plate that makes my life so much better.', name:'Ryan Hamic', role:'Owner, Wasatch Front Physical Therapy', logo:'assets/logos/wfpt.png'},
+    {quote:'She’s also wonderfully reliable and efficient—always posting right on schedule and communicating clearly along the way.', name:'Sandi Pond', role:'The Candy Pan', logo:'assets/logos/candy-pan.png'},
+    {quote:'Devin is great at pulling a person’s life experiences and personality into professional social media posts. She’s easy to work with and open up to.', name:'Angie Castle', role:'Realtor, eXp Realty · Salt Lake City', logo:'assets/logos/exp-realty.png'},
+    {quote:'She guides you through the entire creative process, with prompts and encouragement and total professionalism. She knows social media inside and out so you don’t have to!', name:'Marion Johnson', role:'Realtor, Bear Lake Getaway Realty', logo:'assets/logos/blgr.png'},
+    {quote:'It’s been amazing to work with a company who actually cares!', name:'Josh Phillips', role:'Owner, JP Moving & ClearView Tint'},
+    {quote:'Great with social media management! Devin is very responsive and fun to work with.', name:'Missy Elardi', role:'Broker, UNiTY Group Real Estate · UT & WY', logo:'assets/logos/unity.png'}
   ],
+  logos: [
+    ['eXp Realty','exp-realty'],['Rosewood Tax Services','rosewood'],['The Candy Pan','candy-pan'],['Bear Lake Getaway Realty','blgr'],['Wasatch Front Physical Therapy','wfpt'],['UNiTY Group Real Estate','unity'],['Chambers & Associates Realty','c-a'],['OnSite Real Estate Group','onsite-re-group'],['Park City Culinary Institute','pcci'],['Salty','salty'],['18 Digits','18-digits'],['Aligned Transactions','aligned-transactions'],['Humrickhouse Realty','humrickhouse'],['Groovy Peach Piercing Co.','groovy'],['Diamond Auto Protection','dap'],['Tencap Wealth Coaching','tencap'],['A Couple Renovations','couple-renos'],['Move With Brandy','move-with-brandy'],['Singles Mingle','singles-mingle'],['White Cloud Concierge','wcc'],['Truescale 3D','truescale-3d'],['Holistic Hype Woman','hhw'],['Rachel Claire Functional Health Coaching','rchhc'],['Unchartered','unchartered'],['Avion Photography','avion']
+  ],
+  work: [1,2,3,4,5,6].map(n=>({video:`assets/work/client-${n}.mp4`,poster:`assets/work/client-${n}.jpg`})),
   discount12: 0.10,
   plans: [
     {rate:1, name:'Once a week', price6:2500, hours:'About 2 hours of your time', tagline:'Look the part.', desc:'When leads look you up, they find an active, professional business they can trust.'},
@@ -874,32 +934,42 @@ $$('.flip').forEach(card=>{
   }));
 });
 
-/* Work rail */
-(()=>{const rail=$('#rail');
-  CONFIG.work.forEach((w,i)=>{const b=document.createElement('button');b.type='button';b.className='work rv';
-    b.innerHTML=`<img alt="" loading="lazy"><span class="shade"></span><span class="t"><small></small><b></b></span><span class="play"><i><svg width="12" height="14" viewBox="0 0 12 14"><path d="M1 1l10 6-10 6z" fill="#fff"/></svg></i><span></span></span>`;
-    b.querySelector('img').src=w.poster;b.querySelector('small').textContent=w.kind+(w.sample?' · Sample':'');b.querySelector('b').textContent=w.question;
-    b.querySelector('.play>span').textContent=w.video?'Watch':'See the idea';b.setAttribute('aria-label',`${w.kind}: ${w.question}`);
-    b.addEventListener('click',()=>openWork(w));rail.append(b);});
-  const n=document.createElement('a');n.className='work next rv';n.href='#book';n.dataset.cta='work-next';
-  n.innerHTML='<div><b>Your business, next.</b><p>We’ll map out your first videos on a free call.</p></div><span class="more" style="color:var(--link)">Get started</span>';rail.append(n);
-  const step=()=>rail.querySelector('.work').getBoundingClientRect().width+20;
+/* Hero video: autoplay when allowed, always pausable */
+(()=>{const v=$('#hero-video'),b=$('#hero-toggle');if(!v)return;
+  const small=matchMedia('(max-width: 640px)').matches;if(small)v.poster='assets/hero/hero-port.jpg';
+  const icon=p=>b.innerHTML=p?'<svg width="12" height="14" viewBox="0 0 12 14"><path d="M1 1l10 6-10 6z" fill="currentColor"/></svg>':'<svg width="12" height="14" viewBox="0 0 12 14"><path d="M1 1h3v12H1zM8 1h3v12H8z" fill="currentColor"/></svg>';
+  const sync=()=>{icon(v.paused);b.setAttribute('aria-label',v.paused?'Play video':'Pause video');};
+  v.addEventListener('play',sync);v.addEventListener('pause',sync);
+  b.onclick=()=>{v.paused?v.play():v.pause();};
+  if(!reduce){v.play().catch(()=>{});}sync();
+  new IntersectionObserver(([e])=>{if(!e.isIntersecting&&!v.paused){v.dataset.auto='1';v.pause();}else if(e.isIntersecting&&v.dataset.auto==='1'){v.dataset.auto='';v.play().catch(()=>{});}}).observe(v);
+})();
+
+/* Client work: phones play muted while visible; tap for sound */
+(()=>{const rail=$('#crail');const SPK='<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6v4h3l4 3V3L5 6z"/><path d="M11.5 5.5a3.5 3.5 0 0 1 0 5M13.5 3.5a6.5 6.5 0 0 1 0 9"/></svg>';
+  const MUTE='<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6v4h3l4 3V3L5 6z"/><path d="M11 6l4 4M15 6l-4 4"/></svg>';
+  const phones=[];
+  CONFIG.work.forEach((w,i)=>{const d=document.createElement('div');d.className='cphone rv';
+    const v=document.createElement('video');v.muted=true;v.loop=true;v.playsInline=true;v.setAttribute('playsinline','');v.preload='none';v.poster=w.poster;v.dataset.src=w.video;v.setAttribute('aria-label',`Client video montage ${i+1}`);
+    const b=document.createElement('button');b.type='button';b.className='snd';b.innerHTML=MUTE+'<span>Tap for sound</span>';
+    b.onclick=()=>{const on=v.muted;phones.forEach(p=>{p.v.muted=true;p.d.classList.remove('on');p.b.innerHTML=MUTE+'<span>Tap for sound</span>';});
+      if(on){if(!v.src)v.src=v.dataset.src;v.muted=false;v.play().catch(()=>{});d.classList.add('on');b.innerHTML=SPK+'<span>Sound on</span>';track('video_play',{slot:i+1});}};
+    d.append(v,b);rail.append(d);phones.push({d,v,b});});
+  const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting&&e.intersectionRatio>.6){if(!v.src)v.src=v.dataset.src;if(!reduce||!v.muted)v.play().catch(()=>{});}else{if(!v.paused)v.pause();}}),{threshold:[0,.6,1]});
+  phones.forEach(p=>io.observe(p.v));
+  const step=()=>rail.querySelector('.cphone').getBoundingClientRect().width+22;
   $('#rail-prev').onclick=()=>rail.scrollBy({left:-step(),behavior:reduce?'auto':'smooth'});
   $('#rail-next').onclick=()=>rail.scrollBy({left:step(),behavior:reduce?'auto':'smooth'});
 })();
-function openWork(w){const box=$('#dlg-body');box.replaceChildren();
-  if(w.video){const v=document.createElement('video');v.src=w.video;v.poster=w.poster;v.controls=true;v.playsInline=true;if(w.captions){const t=document.createElement('track');t.kind='captions';t.src=w.captions;t.srclang='en';t.default=true;v.append(t);}box.append(v);track('video_play',{kind:w.kind});}
-  const s=document.createElement('span');s.className='eyebrow';s.style.marginTop='6px';s.textContent=w.kind;
-  const h=document.createElement('h3');h.textContent=w.question;const p=document.createElement('p');p.textContent=w.about||'';box.append(s,h,p);
-  if(!w.video){const a=document.createElement('a');a.className='btn';a.href='#book';a.style.marginTop='20px';a.textContent='Plan videos like this';a.onclick=()=>$('#dlg').close();box.append(a);}
-  $('#dlg').showModal();}
-$('.dlg-x').onclick=()=>$('#dlg').close();
-$('#dlg').addEventListener('click',e=>{if(e.target===e.currentTarget)e.currentTarget.close();});
-$('#dlg').addEventListener('close',()=>$('#dlg video')?.pause());
+
+/* Client logos (monochrome) */
+(()=>{const t=$('#mq');const H=clamp=>clamp;const mk=(l,hidden)=>{const im=new Image();im.src=`assets/logos/${l[1]}.png`;im.alt=hidden?'':l[0];if(hidden)im.setAttribute('aria-hidden','true');im.loading='lazy';im.decoding='async';
+    im.onload=()=>{const ar=im.naturalWidth/im.naturalHeight;const h=Math.round(Math.max(22,Math.min(58,44*Math.sqrt(2.6/ar))));im.style.height=h+'px';};return im;};
+  CONFIG.logos.forEach(l=>t.append(mk(l,false)));CONFIG.logos.forEach(l=>t.append(mk(l,true)));})();
 
 /* Posting calendar art */
-(()=>{const g=$('#cal-g');const imgs=['assets/sample-0.jpg','assets/sample-1.jpg','assets/sample-2.jpg'];let k=0;
-  for(let i=0;i<28;i++){const s=document.createElement('span');if([1,4,8,11,15,18,22,25].includes(i)){s.className='v';s.style.backgroundImage=`url(${imgs[k%3]})`;s.style.animationDelay=(k*.35)+'s';k++;}g.append(s);}})();
+(()=>{const g=$('#cal-g');const imgs=['assets/thumbs/th10.jpg','assets/thumbs/th11.jpg','assets/thumbs/th12.jpg','assets/thumbs/th4.jpg','assets/thumbs/th7.jpg'];let k=0;
+  for(let i=0;i<28;i++){const s=document.createElement('span');if([1,4,8,11,15,18,22,25].includes(i)){s.className='v';s.style.backgroundImage=`url(${imgs[k%5]})`;s.style.animationDelay=(k*.35)+'s';k++;}g.append(s);}})();
 
 /* Pricing */
 let term=6;
@@ -921,16 +991,17 @@ function renderPlans(){const wrap=$('#plans');wrap.replaceChildren();
 $$('[data-term]').forEach(b=>b.addEventListener('click',()=>{term=+b.dataset.term;$$('[data-term]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderPlans();track('pricing_interaction',{term});}));
 renderPlans();
 
-/* Reviews + logos (real only; placeholders are clearly empty slots) */
-(()=>{const g=$('#review-grid'),real=CONFIG.reviews.filter(r=>r.quote&&r.name);
-  real.forEach(r=>{const a=document.createElement('article');a.className='review';a.innerHTML='<span class="stars" aria-label="5 stars">★★★★★</span><blockquote></blockquote><cite></cite>';
-    a.querySelector('blockquote').textContent='“'+r.quote+'”';a.querySelector('cite').textContent=[r.name,r.business].filter(Boolean).join(', ');
-    if(/^https:\/\//.test(r.url||'')){const l=document.createElement('a');l.href=r.url;l.target='_blank';l.rel='noopener';l.className='more';l.style.fontSize='14px';l.textContent='Read on Google';a.append(l);}g.append(a);});
-  if(CONFIG.showPlaceholders)for(let i=real.length;i<3;i++){const a=document.createElement('article');a.className='review ph';a.innerHTML='<blockquote>Client review goes here.</blockquote><cite>Add real reviews in the settings block.</cite>';g.append(a);}
-  if(!g.children.length)g.hidden=true;
-  const L=$('#logos');CONFIG.logos.forEach(l=>{const i=new Image();i.src=l.src;i.alt=l.name;i.loading='lazy';L.append(i);});
-  if(!CONFIG.logos.length&&CONFIG.showPlaceholders)for(let i=0;i<5;i++){const s=document.createElement('span');s.className='ph';s.title='Client logo';L.append(s);}
-  if(!L.children.length)L.hidden=true;
+/* Testimonials (exact client words) */
+(()=>{const f=CONFIG.feature,fe=$('#feature');
+  if(f){const q=document.createElement('blockquote');q.textContent=f.quote;const c=document.createElement('figcaption');c.innerHTML='<cite><span class="stars" aria-label="5 stars">★★★★★</span><span><b></b> · <span></span></span></cite>';c.querySelector('b').textContent=f.name;c.querySelector('b').nextSibling.nextSibling.textContent=f.role;fe.append(q,c);}else fe.hidden=true;
+  const g=$('#review-grid'),SHOW=6;
+  CONFIG.reviews.forEach((r,i)=>{const a=document.createElement('article');a.className='review rv';if(i>=SHOW)a.hidden=true;
+    a.innerHTML='<span class="stars" aria-label="5 stars">★★★★★</span><blockquote></blockquote><div class="who"><cite><b></b><span></span></cite></div>';
+    a.querySelector('blockquote').textContent='“'+r.quote+'”';a.querySelector('cite b').textContent=r.name;a.querySelector('cite span').textContent=r.role;
+    if(r.logo){const im=new Image();im.src=r.logo;im.alt='';im.loading='lazy';a.querySelector('.who').append(im);}g.append(a);});
+  const more=$('#more-rev');if(CONFIG.reviews.length<=SHOW)more.parentElement.hidden=true;
+  more.onclick=()=>{g.querySelectorAll('.review[hidden]').forEach(x=>x.hidden=false);more.parentElement.hidden=true;};
+  if(CONFIG.googleReviewsUrl){$('#g-link').href=CONFIG.googleReviewsUrl;$('#g-link').hidden=false;}
   if(CONFIG.referralReward){$('#ref-reward').textContent=CONFIG.referralReward;$('#ref-reward').hidden=false;}
 })();
 
